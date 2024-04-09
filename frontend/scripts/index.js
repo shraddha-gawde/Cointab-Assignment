@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userContainer = document.getElementById('userContainer');
     
     const baseURL = "http://localhost:4000"
-    
+
     async function fetchUsers() {
       try {
         const response = await fetch(`${baseURL}/users`);
@@ -113,7 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         } else if (targetButton.classList.contains('openButton')) {
           const userId = targetButton.getAttribute('data-userid');
-          openPostPage(userId);
+        //   openPostPage(userId);
+        console.log(userId)
+        localStorage.setItem("userId", userId);
+          window.location.href ="../frontend/view/posts.html"
         }
       });
       
@@ -142,10 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
   
-    function openPostPage(userId) {
-      window.location.href = `/posts/${userId}`; 
-    }
-  
+    
     window.addEventListener('load', () => {
       const addButtonList = document.querySelectorAll('.addButton');
       addButtonList.forEach(addButton => {
