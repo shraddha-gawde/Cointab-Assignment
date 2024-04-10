@@ -1,9 +1,10 @@
-const baseURL = "http://localhost:4000";
+const baseURL = "https://cointab-assignment-z89v.onrender.com";
 const userId = localStorage.getItem("userId");
 
 
 async function openPostPage(userId) {
   try {
+    loadingSpinner.style.display = 'block';
     const response = await fetch(`${baseURL}/posts/${userId}`);
     if (!response.ok) {
       throw new Error("Failed to fetch user posts");
@@ -15,6 +16,8 @@ async function openPostPage(userId) {
   } catch (error) {
     console.error("Error fetching user posts:", error);
     return null;
+  }finally {
+    loadingSpinner.style.display = 'none'; 
   }
 }
 

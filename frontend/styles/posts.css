@@ -22,7 +22,7 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
-    background-color: #d3e5d5;/* Light Blue */
+    background-color: #d3e5d5;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -81,6 +81,19 @@ body {
   }
   
   #downloadExcelButton:hover {
-    background: linear-gradient(to right,  #519654, #4cf154); /* Gradient from light red to dark red */
+    background: linear-gradient(to right,  #519654, #4cf154); 
   }
-  
+  #loadingSpinner{
+    margin: auto;
+    display: inline;
+    width: 4px;
+  }
+  #loadingSpinner img{
+    width: 60px;
+  }
+  #loadingSpinner p{
+    color: #e75050;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 4px;
+  }

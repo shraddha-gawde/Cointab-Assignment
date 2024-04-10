@@ -2,10 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const allUsersButton = document.getElementById('allUsersButton');
     const userContainer = document.getElementById('userContainer');
     
-    const baseURL = "http://localhost:4000"
+    const baseURL = "https://cointab-assignment-z89v.onrender.com"
 
     async function fetchUsers() {
       try {
+        loadingSpinner.style.display = 'block';
         const response = await fetch(`${baseURL}/users`);
         const users = await response.json();
         displayUsers(users);
@@ -19,13 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (error) {
         console.error('Error fetching users:', error);
         alert('Error fetching users. Please try again later.');
+      }finally {
+        loadingSpinner.style.display = 'none'; 
       }
     }
   
     // Function to display user cards
     function displayUsers(users) {
+      
       userContainer.innerHTML = ''; 
-  
       users.forEach(user => {
         const userCard = createUserCard(user);
         userContainer.appendChild(userCard);

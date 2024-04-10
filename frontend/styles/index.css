@@ -91,4 +91,17 @@ body {
   .userCard .openButton:hover {
     background: linear-gradient(to right,  #519654, #4cf154); 
   }
-  
+  #loadingSpinner{
+    margin: auto;
+    display: inline;
+    width: 4px;
+  }
+  #loadingSpinner img{
+    width: 60px;
+  }
+  #loadingSpinner p{
+    color: #e75050;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 4px;
+  }
