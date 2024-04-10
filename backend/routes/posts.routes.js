@@ -82,6 +82,22 @@ postRouter.get('/:userId', async (req, res) => {
       res.status(500).json({ success: false, message: 'Failed to generate Excel file' });
     }
   });
+
+  postRouter.get('/exists/:userId', async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const posts = await postModel.findAll({ where: { userId: userId } });
+      if (posts.length > 0) {
+        res.status(200).json({ exists: true });
+      } else {
+        res.status(200).json({ exists: false });
+      }
+    } catch (error) {
+      console.error('Error checking if posts exist for the user:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+
 module.exports={
     postRouter
 }
