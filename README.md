@@ -50,7 +50,7 @@ Backend : [Cointab Assignment Backend](https://cointab-assignment-z89v.onrender.
 3. **Database Configuration**:
    - Set up a MySQL database and configure credentials in `backend/db.js`.
 4. **Run the Application**:
-   - Backend: `cd backend && npm start`
-   - Frontend: `cd frontend && npm start`
+   - Backend: `cd backend && npm run server`
+   
 
 
