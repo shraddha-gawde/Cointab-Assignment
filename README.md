@@ -53,6 +53,4 @@ Backend : [Cointab Assignment Backend](https://cointab-assignment-z89v.onrender.
    - Backend: `cd backend && npm start`
    - Frontend: `cd frontend && npm start`
 
-## Credits
 
-- This application was developed by Vishnuraj K R.
