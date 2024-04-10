@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //   openPostPage(userId);
         console.log(userId)
         localStorage.setItem("userId", userId);
-          window.location.href ="../frontend/view/posts.html"
+          window.location.href ="./view/posts.html"
         }
       });
       
