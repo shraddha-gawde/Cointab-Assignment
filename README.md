@@ -4,6 +4,8 @@ This application is a web-based system designed to manage user information and p
 
 
 
+
+
 ![image](https://github.com/shraddha-gawde/Cointab-Assignment/assets/101090200/852d2e5d-1dfe-4c11-858d-08519a4eadda)
 
 
